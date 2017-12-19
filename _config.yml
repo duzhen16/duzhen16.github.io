@@ -18,7 +18,7 @@ sidebar-avatar: /img/Raffaello_Sanzio.jpg      # use absolute URL, seeing it's u
 
 # SNS settings
 RSS: false
-weibo_username:     2978080213/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
+#weibo_username:     2978080213/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
 #zhihu_username:     qiubaiying
 github_username:    duzhen16
 #facebook_username:  baiying.qiu.7
