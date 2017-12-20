@@ -49,6 +49,6 @@ tags:
  2. 销毁：内核通过[free_thread_stack()][3]销毁进程的内核栈。
 
 
-  [1]: ../img/kernel-stack-layout.png "kernel-stack-layout"
+  [1]: img/kernel-stack-layout.png
   [2]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L172
   [3]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L214
