@@ -1,6 +1,6 @@
 ---
 layout:      post
-title:       2017-12-20-进程内核栈
+title:       进程内核栈
 subtitle:    内核栈相关概念
 date:        2017-12-20
 author:      xSun
