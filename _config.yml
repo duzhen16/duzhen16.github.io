@@ -22,7 +22,6 @@ weibo_username:     2978080213/profile?rightmod=1&wvr=6&mod=personinfo&is_all=1
 #zhihu_username:     qiubaiying
 github_username:    duzhen16
 #facebook_username:  baiying.qiu.7
-#jianshu_username:   e71990ada2fd
 #twitter_username:   qiubaiying
 
 
@@ -39,7 +38,7 @@ anchorjs: true                          # if you want to customize anchor. check
 
 # Gems
 # from PR#40, to support local preview for Jekyll 3.0
-#gems: [jekyll-paginate]
+gems: [jekyll-paginate]
 
 
 
@@ -73,8 +72,8 @@ kramdown:
 #ba_track_id: b50bf2b12b5338a1845e33832976fd68
 
 # Google Analytics
-#ga_track_id: 'UA-90855596-1'            # Format: UA-xxxxxx-xx
-#ga_domain: auto
+ga_track_id: 'UA-111417223-1'            # Format: UA-xxxxxx-xx
+ga_domain: auto
 
 
 
