@@ -34,14 +34,14 @@ tags:
   ```
   union thread_unoin {
       struct thread_info thread_info;
-	  unsigned long stack[THREAD_SIZE/sizeof(long)];
+	    unsigned long stack[THREAD_SIZE/sizeof(long)];
   }
   ```
   在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页。如下图所示：
                                                     ![enter description here][1]
 													
-    由此图可以看出，在4个页面内，thread_info处于最低端，栈从高地址开始扩展，esp指向栈顶，task_struct中的stack指向此区域的基地址，是低12位对齐的。
-
+    
+  由此图可以看出，在4个页面内，thread_info处于最低端，栈从高地址开始扩展，esp指向栈顶，task_struct中的stack指向此区域的基地址，是低12位对齐的。
 ----
 #内核栈的创建、销毁
     
@@ -49,6 +49,6 @@ tags:
  2. 销毁：内核通过[free_thread_stack()][3]销毁进程的内核栈。
 
 
-  [1]: ./images/kernel-stack-layout.png "kernel-stack-layout"
+  [1]: ../img/kernel-stack-layout.png "kernel-stack-layout"
   [2]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L172
   [3]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L214
