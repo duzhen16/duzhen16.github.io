@@ -44,15 +44,13 @@ tags:
   ```
   union thread_unoin {
       struct thread_info thread_info;
-	    unsigned long stack[THREAD_SIZE/sizeof(long)];
+      unsigned long stack[THREAD_SIZE/sizeof(long)];
   }
   ```
   
-  在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页。如下图所示：                                												
-   
-   ![](../img/kernel-stack-layout.png)
-
-   由此图可以看出，在4个页面内，thread_info处于最低端，栈从高地址开始扩展，esp指向栈顶，task_struct中的stack指向此区域的基地址，是低12位对齐的。
+  在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页。如下图所示：
+     ![kernel-stack](../img/kernel-stack-layout.png  "kernel-stack")
+  由此图可以看出，在4个页面内，thread_info处于最低端，栈从高地址开始扩展，esp指向栈顶，task_struct中的stack指向此区域的基地址，是低12位对齐的。
  
 ----
 
