@@ -25,7 +25,7 @@ tags:
 
 ## **内核栈**
  
-  task_struct定义在 include/linux/sched.h中，这个结构体积庞大，详细内容参考另一篇文章。这里我们只关心和内核栈相关的数据项：
+  task_struct定义在 include/linux/sched.h中，这个结构体积庞大，详细内容参考[另一篇文章][1]。这里我们只关心和内核栈相关的数据项：
 	
  
   ```
@@ -63,5 +63,8 @@ tags:
 
 
   
+
+
+  [1]: https://github.com/duzhen16/LDD-LinuxDeviceDrivers/tree/master/study/kernel/01-process/01-task/01-task_struct
   [2]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L172
   [3]: http://elixir.free-electrons.com/linux/v4.10/source/kernel/fork.c#L214
