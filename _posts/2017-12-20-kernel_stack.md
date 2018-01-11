@@ -48,7 +48,7 @@ tags:
   }
   ```
   
-  在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页。如下图所示：
+  在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页,内核在直接映射内存区为其分配空间。如下图所示：
   
   ![img](http://p194hb5ge.bkt.clouddn.com/kernel-stack-layout.png "kernel stack")
   
