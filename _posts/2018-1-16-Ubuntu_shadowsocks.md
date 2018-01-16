@@ -4,7 +4,7 @@ title:         Ubuntu 安装 shadowsocks      # title
 subtitle:   增加新的加密方式 # subtitle
 date:       2018-1-19              # time
 author:     xSun                    # author
-header-img: img/post-bg-2015.jpg    #bg image
+header-img: img/post-bg-unix-linux.jpg    #bg image
 catalog: true                       # catalog or not
 tags:                               #tags
     - Ubuntu
