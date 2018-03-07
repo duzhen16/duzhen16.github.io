@@ -1,6 +1,6 @@
 ---
 layout:     post                    # layout, do not alter
-title:        Linux SMP(1) # title
+title:      Linux SMP(1) # title
 subtitle:   SMP相关概念辨析 # subtitle
 date:       2018-01-06              # time
 author:     xSun                    # author
