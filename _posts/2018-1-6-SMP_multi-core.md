@@ -1,6 +1,6 @@
 ---
 layout:     post                    # layout, do not alter
-title:      Linux SMP(1) # title
+title:Linux SMP(1)            # title
 subtitle:   SMP相关概念辨析 # subtitle
 date:       2018-01-06              # time
 author:     xSun                    # author
@@ -8,6 +8,7 @@ header-img: img/home-bg-o.jpg    #bg image
 catalog: true                       # catalog or not
 tags:                               #tags
     - HardWare
+    - SMP
 ---
 
 >最近跟老板讨论问题，发现有些基础概念有些模糊，在此做以辨析。
