@@ -5,9 +5,9 @@ header-img: img/post-bg-desk.jpg
 email: duzhenallan@gmail.com
 description: "xSun's Site"
 keyword: "life interest work"
-url: "http://chenup.github.io"          # your host, for absolute URL
+url: "http://duzhen16.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
-github_repo: "https://github.com/chenup/chenup.github.io.git" # you code repository
+github_repo: "https://github.com/duzhen16/duzhen16.github.io.git" # you code repository
 
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
