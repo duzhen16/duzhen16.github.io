@@ -4,7 +4,7 @@ title:      校招准备          # title
 subtitle:   C/C++基础（1）    # subtitle
 date:       2018-8-17         # time
 author:     xSun             # author
-header-img: img/home-bg.jpg  #bg image
+header-img: img/DSC_4446.jpg  #bg image
 catalog: true                # catalog or not
 tags:                        #tags
     - 校招
@@ -139,7 +139,7 @@ class CBase{
 };
 sizeof(CBase) == 1;
 ```
-深度探索c++对象模型中是这样说的：那是被编译器插进去的一个char，使得这个class的不同实体（object）在内存中配置独一无二的地址。也就是说这个char是用来标识类的不同对象的。
+《深度探索c++对象模型》中是这样说的：那是被编译器插进去的一个char，使得这个class的不同实体（object）在内存中配置独一无二的地址。也就是说这个char是用来标识类的不同对象的。
 
 ---
 
