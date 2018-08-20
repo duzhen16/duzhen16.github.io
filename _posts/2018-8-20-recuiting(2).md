@@ -2,7 +2,7 @@
 layout:     post             # layout, do not alter
 title:      校招准备          # title
 subtitle:   C/C++基础（2）    # subtitle
-date:       2018-8-17         # time
+date:       2018-8-20         # time
 author:     xSun             # author
 header-img: img/DSC_4446.jpg  #bg image
 catalog: true                # catalog or not
