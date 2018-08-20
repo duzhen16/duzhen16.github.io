@@ -6,6 +6,7 @@ date:       2018-8-17         # time
 author:     xSun             # author
 header-img: img/DSC_4446.jpg  #bg image
 catalog: true                # catalog or not
+mermaid: true		     # support mermaid
 tags:                        #tags
     - 校招
     - C/C++
