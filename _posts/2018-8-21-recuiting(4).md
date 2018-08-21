@@ -21,7 +21,7 @@ tags:                        #tags
 
 TCP经过三次握手建立链接，具体的流程如下图所示。
 
-![TCP三次握手](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png?OSSAccessKeyId=LTAIS4Y3KwUG3m3s&Expires=1534846850&Signature=cVHiMR%2FNChqsWx9lQLiuzjUpZig%3D)
+![TCP三次握手](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png)
 
 #### 为什么要三次握手？
 
@@ -35,7 +35,7 @@ TCP经过三次握手建立链接，具体的流程如下图所示。
 
 TCP断开链接需要四次挥手，具体流程如下图。
 
-![四次挥手](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png?OSSAccessKeyId=LTAIS4Y3KwUG3m3s&Expires=1534846873&Signature=ss8KDzjJ5vJTO6caixTMJhlKNvw%3D)
+![四次挥手](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E5%9B%9B%E6%AC%A1%E6%8C%A5%E6%89%8B.png)
 
 **发送了FIN只是表示这端不能继续发送数据(应用层不能再调用send发送)，但是还可以接收数据。**收到一个
 FIN只意味着这一方向上没有数据流动，一个TCP连接在收到一个FIN后仍能发送数据，比如：如主机A收到主机B的FIN断开TCP连接请求，只是表示主机B已经发送完数据，主机A收到FIN后作出应答，并终止这个方向的数据传输，此时处于**半关闭状态。**但是主机A仍然可以发送数据的，只有当主机A发送完数据并发送FIN给主机B时，主机B才停止这个方向的数据传输，并关闭TCP连接。

@@ -172,8 +172,7 @@ const Foo foo(xxx);
 5. 将一个类的构造和析构设置为private，则此类不能被继承。
 6. 多继承
 
-![菱形继承](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E8%8F%B1%E5%BD%A2%E7%BB%A7%E6%89%BF.jpg?Expires=1534758825&OSSAccessKeyId=TMP.AQE7X1-KmQI79fmCwc11eoJGmhY5Mh2z33Q6SGp0jmV3GV10l7nsYqu8OM8wAAAwLAIUYLvHhqzHc0HgNkEFO-_Ep7UL5rsCFG3ZW2SvigcpB1qYYda8fB4mHKW5&Signature=jpfKF%2BGdNWGK3WtQGaGFOcouE7I%3D
-)
+![菱形继承](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E8%8F%B1%E5%BD%A2%E7%BB%A7%E6%89%BF.jpg)
 
 虚继承是一种机制，类通过虚继承指出它希望共享虚基类的状态。对给定的虚基类，无论该类在派生层次中作为虚基类出现多少次，只继承一个共享的基类子对象，共享基类子对象称为虚基类。虚基类用`virtual`声明继承关系就行了。这样，D就只有A的一份拷贝。
 
