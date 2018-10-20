@@ -1,9 +1,9 @@
 # Site settings
 title: Blogs
-SEOTitle: xSun Blog
+SEOTitle: Denker Blog
 header-img: img/IMG_2669.jpg
 email: du_allan@126.com
-description: "xSun's Site"
+description: "Denker's Site"
 keyword: "life interest work"
 url: "http://duzhen16.github.io"          # your host, for absolute URL
 baseurl: ""      # for example, '/blog' if your blog hosted on 'host/blog'
