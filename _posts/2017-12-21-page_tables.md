@@ -43,7 +43,7 @@ struct mm_struct init_mm = {
 ### 32位内核地址空间布局
 
 32位下，内核地址空间有1G，即就是4G中最高的1G空间，逻辑地址范围是：0xC000,0000<—>0xFFFF,FFFF。在此1G的地址空间中，划分为几个区域，如下图所示：
-![img](http://p194hb5ge.bkt.clouddn.com/内核地址空间布局.jpg)
+![img](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/%E5%86%85%E6%A0%B8%E5%9C%B0%E5%9D%80%E7%A9%BA%E9%97%B4%E5%B8%83%E5%B1%80.jpg.png)
 
  - 内存区开始部分包含的是对896M RAM进行映射的线性地址。直接映射末尾的地址保存在high_memory变量中。（参考ULK P74.）
  
@@ -79,7 +79,7 @@ struct mm_struct init_mm = {
 ## **缺页处理（部分）**
 
 接下来，我们来看内核如何将自己的主内核页表同步到进程的内核态页表。前面我们提到，内核初始化后，其他进程并不直接使用主内核页表。当内核态进程第一次访问非连续性内存区地址时，去查询它自己的内核页表，其中相应的表项为空，产生page fault，缺页处理程序[do_page_fault()][15]被调用，缺页处理的逻辑十分复杂，因为当时的情况可能会比较复杂，详细的处理逻辑可以查阅其源码。我们此处只关心其中的一条通路。如下图：
-![img](http://p194hb5ge.bkt.clouddn.com/do_page_fault.gif)
+![img](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/do_page_fault.gif)
 
 当进程处于内核态，对内核地址空间访问时，发生缺页，此时产生vmalloc_fault：
 

@@ -62,7 +62,7 @@ sudo make install
 ```
 5.网络设置
 最后一步，我们需要进行网络代理设置，将流量转发到1080端口。如下图：
-![](http://p194hb5ge.bkt.clouddn.com/net.png)
+![](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/net.png)
 
 ## 结束
 最终打开shadowsocks-Qt5即可，填入账户信息。我们发现，我们自己编译的客户端已经可以支持更多的加密方式了。终于又可以摆脱百度的束缚，投入Google的怀抱！

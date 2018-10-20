@@ -50,7 +50,7 @@ tags:
   
   在x86_64中，thread_union的大小为16KB，每个页为4KB，它所占4个页,内核在直接映射内存区为其分配空间。如下图所示：
   
-  ![img](http://p194hb5ge.bkt.clouddn.com/kernel-stack-layout.png "kernel stack")
+  ![img](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/kernel-stack-layout.png "kernel stack")
   
   由此图可以看出，在4个页面内，thread_info处于最低端，栈从高地址开始扩展，esp指向栈顶，task_struct中的stack指向此区域的基地址，是低12位对齐的。
  
