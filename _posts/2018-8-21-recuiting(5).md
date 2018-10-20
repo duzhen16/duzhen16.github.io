@@ -40,7 +40,7 @@ n0,n1,n2分别表示度为0,1,2的节点，**二叉树中的度定义为出度**
 3. d是表示树的宽度，除叶子节点之外，其它每个节点有[d/2,d-1]条记录，并且些记录中的key都是从左到右按大小排列的，有[d/2+1,d]个孩子； 
 4. 在一个节点中，第n个子树中的所有key，小于这个节点中第n个key，大于第n-1个key，比如下图中B节点的第2个子节点E中的所有key都小于B中的第2个key 9，大于第1个key 3; 
 5. 所有的叶子节点必须在同一层次，也就是它们具有相同的深度。
-![B树](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/B%E6%A0%91.jpg)
+![B树](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/B%E6%A0%91.jpg)
 
 #### 性质
 一个度为d的B-Tree，设其索引N个key，则其树高h的上限为logd((N+1)/2)，
@@ -55,7 +55,7 @@ B+树是应文件系统所需而产生的一种B-树的变形树。一棵m阶的
 2. 所有的叶子结点中包含了全部关键码的信息，及指向含有这些关键码记录的指针，且叶子结点本身依关键码的大小自小而大的顺序链接。
 3. 所有的非终端结点可以看成是索引部分，结点中仅含有其子树根结点中最大（或最小）关键码。
 
-![B+树](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/B%2B%E6%A0%91.jpg)
+![B+树](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/B%2B%E6%A0%91.jpg)
 
 做这个优化的目的是为了提高区间访问的性能，例如图4中如果要查询key为从18到49的所有数据记录，当找到18后，只需顺着节点和指针顺序遍历就可以一次性访问到所有数据节点，极大提到了区间查询效率。
 
@@ -100,7 +100,7 @@ B+树是应文件系统所需而产生的一种B-树的变形树。一棵m阶的
 ### 内排序
 以下是各种排序算法的时间复杂度和空间复杂度的列表总结。
 
-![sort](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/sort.jpg)
+![sort](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/sort.jpg)
 [代码实现][2]
 
 >>算法的稳定性以及初始输入是否会影响复杂度。
@@ -118,11 +118,11 @@ B+树是应文件系统所需而产生的一种B-树的变形树。一棵m阶的
 ##### 败者树
 叶子节点记录k个段中的最小数据，然后两两进行比赛。败者树是在双亲节点中记录下刚刚进行完的这场比赛的败者，让胜者去参加更高一层的比赛。决赛，根节点记录输者，所以需要重建一个新的根节点，记录胜者(如下图节点0）
 
-![败者树1](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E8%B4%A5%E8%80%85%E6%A0%911.jpg)
+![败者树1](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/%E8%B4%A5%E8%80%85%E6%A0%911.jpg)
 
 每路的第一个元素为胜利树的叶子节点，（5,7）比较出5胜出7失败成为其根节点，（29,9）比较9胜出29失败成为其根节点，胜者（5,9）进行下次的比赛9失败成为其根节点5胜出输出到输出缓冲区。由第一路归并段输出，所有将第一路归并段的第二个元素加到叶子节点如下图：
 
-![败者树2](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/%E8%B4%A5%E8%80%85%E6%A0%912.jpg)
+![败者树2](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/%E8%B4%A5%E8%80%85%E6%A0%912.jpg)
 
 >> 资料来源于网络，侵删。
 
@@ -170,18 +170,18 @@ B-Tree中一次检索最多需要`h-1`次I/O（根节点常驻内存），渐进
 MyISAM引擎使用B+Tree作为索引结构，叶节点的data域存放的是数据记录的地址。MyISAM的索引方式也叫做“非聚集”的，之所以这么称呼是为了与InnoDB的聚集索引区分。
 主索引和辅助索引的data值都是对应记录的地址。
 
-![MyISAM](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/my.jpg)
+![MyISAM](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/my.jpg)
 
 #### InnoDB索引实现
 
 虽然InnoDB也使用B+Tree作为索引结构，但具体实现方式却与MyISAM截然不同。
 第一个重大区别是InnoDB的数据文件本身就是索引文件。在InnoDB中，表数据文件本身就是按B+Tree组织的一个索引结构，这棵树的叶节点data域保存了完整的数据记录。这个索引的key是数据表的主键，因此InnoDB表数据文件本身就是主索引。
 
-![InnoDB](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/in1.jpg)
+![InnoDB](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/in1.jpg)
 
 第二个与MyISAM索引的不同是InnoDB的辅助索引data域存储相应记录主键的值而不是地址。换句话说，InnoDB的所有辅助索引都引用主键作为data域。例如，下图为定义在Col3上的一个辅助索引：
 
-![InnoDB2](https://xsun24images.oss-cn-hangzhou.aliyuncs.com/images/In2.jpg)
+![InnoDB2](https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/In2.jpg)
 
 另外，我们也就很容易明白为什么不建议使用过长的字段作为主键，因为所有辅助索引都引用主索引，过长的主索引会令辅助索引变得过大。
 
