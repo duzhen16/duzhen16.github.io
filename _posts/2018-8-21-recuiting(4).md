@@ -21,7 +21,7 @@ tags:                        #tags
 
 TCP经过三次握手建立链接，具体的流程如下图所示。
 
-![TCP三次握手]https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.pngg)
+![TCP三次握手]https://site-images-1256908946.cos.ap-shanghai.myqcloud.com/%E4%B8%89%E6%AC%A1%E6%8F%A1%E6%89%8B.png)
 
 #### 为什么要三次握手？
 
